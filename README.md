@@ -1,1 +1,1 @@
-# basic-ci-cd
+# basic-ci-cd practice

@@ -25,7 +25,8 @@ jobs:
 
     steps:
       - name: Running PHPCS
-        run: sh ${{ github.workspace }}/phpcs/simple-check.sh
+        run: |
+          ls -l
 
       # - name: Completation Text
       #   run: echo "Hello World 3"

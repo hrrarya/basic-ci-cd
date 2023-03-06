@@ -18,6 +18,8 @@ jobs:
 
       - name: Install Composer dependencies
         run: cd ./phpcs && composer install
+      - name: check directory
+        run: echo $PWD
 
   PHPCS:
     runs-on: ubuntu-latest
@@ -25,7 +27,7 @@ jobs:
 
     steps:
       - name: Running PHPCS
-        run: bash simple-check.sh
+        run: echo "$PWD"
 
       # - name: Completation Text
       #   run: echo "Hello World 3"

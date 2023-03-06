@@ -25,7 +25,6 @@ jobs:
 
     steps:
       - name: Running PHPCS
-        # run: ["ls", "chmod u+x ./simple-check.sh", "sh ./simple-check.sh"]
         run: [
             ls
             chmod u+x ./simple-check.sh

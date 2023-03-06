@@ -17,11 +17,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install Composer dependencies
+        uses: actions/cache@v3
         run: cd ./phpcs && composer install
+        if: steps.cache-packages.outputs.cache-hit != 'true'
 
       - name: Running PHPCS
         run: |
-          ls -l
           cd phpcs
           sh ./simple-check.sh
       # - name: Completation Text

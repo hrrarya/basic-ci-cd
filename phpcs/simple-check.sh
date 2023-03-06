@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash          
 # read -p 'Enter your module folder path(avoid last Oblique): ' path
 # woo_template="$path/templates/woocommerce"
 

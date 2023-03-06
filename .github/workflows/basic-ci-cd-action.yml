@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Running PHPCS
-        run: ./simple-check.sh
+        run: bash simple-check.sh
 
       # - name: Completation Text
       #   run: echo "Hello World 3"

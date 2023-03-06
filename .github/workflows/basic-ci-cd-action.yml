@@ -19,11 +19,6 @@ jobs:
       - name: Install Composer dependencies
         run: cd ./phpcs && composer install
 
-  PHPCS:
-    runs-on: ubuntu-latest
-    needs: [build]
-
-    steps:
       - name: Running PHPCS
         run: |
           ls -l

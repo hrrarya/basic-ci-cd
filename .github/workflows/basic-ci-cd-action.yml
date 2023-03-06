@@ -1,5 +1,4 @@
-name: Basic PHP CI/CD Task Automation
-
+name: Basic PHPCS CI/CD Task Automation
 on:
   push:
     branches: ["main"]
@@ -16,16 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Using Caching action
-        uses: lukekortunov/php-composer-install-and-cache@v1
-
       - name: Install Composer dependencies
-        run: cd ./phpcs && composer install
-        if: steps.cache-packages.outputs.cache-hit != 'true'
+        run: |
+          cd ./phpcs 
+          composer install
 
       - name: Running PHPCS
         run: |
           cd phpcs
           sh ./simple-check.sh
-      # - name: Completation Text
-      #   run: echo "Hello World 3"

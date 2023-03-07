@@ -14,13 +14,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Clone Marketplace PHPCS Repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: 'hrrarya'
+          repository: 'marketplace-phpcs'
 
       - name: Install Composer dependencies
         run: |
-          cd ./phpcs 
+          cd ./marketplace-phpcs 
           composer install
 
       - name: Running PHPCS
         run: |
-          cd phpcs
+          cd marketplace-phpcs
           sh ./simple-check.sh
